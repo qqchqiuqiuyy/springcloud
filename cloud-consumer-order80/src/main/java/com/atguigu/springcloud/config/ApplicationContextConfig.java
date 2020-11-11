@@ -13,7 +13,7 @@ import org.springframework.web.client.RestTemplate;
 public class ApplicationContextConfig
 {
     @Bean
-    @LoadBalanced  // 对方实例情况下,进行负载均衡, 否则无法发现服务
+    //@LoadBalanced  // 对方实例情况下,进行负载均衡, 否则无法发现服务
     public RestTemplate getRestTemplate()
     {
         return new RestTemplate();
