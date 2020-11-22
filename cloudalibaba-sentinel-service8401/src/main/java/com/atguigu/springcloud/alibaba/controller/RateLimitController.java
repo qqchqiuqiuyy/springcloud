@@ -27,7 +27,7 @@ public class RateLimitController
     }
 
     @GetMapping("/rateLimit/byUrl")
-    @SentinelResource(value = "byUrl")
+    @SentinelResource(value = "byUrl")  //不写blockHandler就走默认
     public CommonResult byUrl()
     {
         return new CommonResult(200,"按url限流测试OK",new Payment(2020L,"serial002"));
